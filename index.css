@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css?family=Monoton');
+html {
+    background-image:url('https://i.giphy.com/media/4laNV9M9yD5ni/giphy.webp');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+#neon-sign {
+  width: 500px;
+  margin: auto;
+}
+
+h1 {
+  text-align: center;
+  font-size: 9em;
+  margin: 20px 0 20px 0;
+  font-family: 'Monoton', cursive;
+  font-weight: lighter;
+}
+
+h2 {
+  font-family: 'Monoton', cursive;
+  color: #ec9b00;
+  font-weight: lighter;
+  font-size: 3em;
+}
+
+p {
+  font-family: 'Monoton', cursive;
+  font-size: 2em;
+  font-stretch: normal;
+  color: #ec9b00;
+  word-spacing: 1px;
+  text-indent: 1em;
+  width: 600px;
+  line-height: 1em;
+}
+
+h1:nth-child(1)  {  /* The specific CSS selector of the h1 element that is the child of the parent */
+  color: #ec5300;
+  font-family: Monoton;
+  -webkit-aniamtion: neon1 1.5s ease infinite alternate; /* The fuzzy glow animation*/
+  animation: neon1  1.5s ease infinite alternate;
+}
+
+@-webkit-keyframes neon1 {
+  from {
+    text-shadow: 0 0 10px #ec9b00, 0 0 20px #ec9b00, 0 0 30px #ec9b00, 0 0 40px 	#ec5300, 0 0 70px #ec5300, 0 0 80px #ec5300, 0 0 100px #ec5300, 0 0 150px #ec5300;  /* @keyframes transitions pne CSS style ot another to create glowing animation*/
+  }
+  to {
+    text-shadow: 0 0 5px #ec9b00	, 0 0 10px #ec9b00	, 0 0 15px #ec9b00	, 0 0 20px #ec5300, 0 0 35px #ec5300, 0 0 40px #ec5300, 0 0 50px #ec5300, 0 0 75px #ec5300;
+  }
+}
+
+@keyframes neon1 {
+  from {
+    text-shadow: 0 0 10px #ec9b00	, 0 0 20px #ec9b00	, 0 0 30px #ec9b00	, 0 0 40px #ec5300, 0 0 70px #ec5300, 0 0 80px #ec5300, 0 0 100px #ec5300, 0 0 150px #ec5300;
+  }
+  to {
+    text-shadow: 0 0 5px #ec9b00	, 0 0 10px #ec9b00	, 0 0 15px #ec9b00	, 0 0 20px #ec5300, 0 0 35px #ec5300, 0 0 40px #ec5300, 0 0 50px #ec5300, 0 0 75px #ec5300;
+  }
+}
+
+@media (max-width: 650px) {
+  #neon-sign {
+    width: 100%;
+  }
+  p {
+    font-size: 3.5em;
+  }
+}
+
+.text-glow {
+    -webkit-animation: glow .6s infinite alternate;
+}
+
+@-webkit-keyframes glow {
+    to {
+        text-shadow: 0 0 10px red;
+    }
+}
